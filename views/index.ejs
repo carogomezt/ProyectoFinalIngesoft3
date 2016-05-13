@@ -1,17 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>proyectofinal</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/stylesheets/materialize.min.css' />
-    <link rel='javascript' href='/js/materialize.min.js' />
-  </head>
-  <body>
-    <h1>proyectofinal</h1>
-    <form action="/login" method="post">
-      <input type="text" name="mesa"/><br />
-      <input type="password" name="pwd"/><br />
-      <input type="submit" value="Login" />
-    </form>
-  </body>
-</html>
+<div class="row">
+  <div class="style-title">
+    <h1>Restaurante JC</h1>
+  </div>      
+  <form class="col s12 col m12 col l12" action="/login" method="post">
+    <div class="row">
+      <div class="input-field col l6 offset-l3 col m6 col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="mesa" type="text" class="validate" name="mesa">
+        <label for="mesa">Mesa</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col l6 offset-l3 col m6 col s6">
+        <i class="material-icons prefix">lock</i>
+        <input id="pwd" type="password" class="validate" name="pwd">
+        <label for="pwd">Password</label>
+      </div>
+    </div>
+    
+    <div class="center-align">
+      <input class="waves-effect waves-light btn" type="submit" value="Login" />
+    </div>
+    
+  </form>
+</div>

@@ -1,8 +1,36 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  background-color: #fff;
+  font-family: 'Lato', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.content{
+  max-width: 100%;
+  margin: 10px auto;
+  background-color:  #fff;
+}
+
+.cont{
+	content: "";
+  clear: both;
+  display: block;
+  width: 90%;
+ 	margin: 10px auto;
+  padding: 10px;
+  background-color:  #fff;
+}
+.style-title {
+	font-family: 'Linden Hill', serif;
+  text-align: center;  
+}
+
+nav {
+	background-color: #26a69a;
+}
+
+.text-left {
+	text-align: left;
 }

@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>menu</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Menú</h1>
-    <a href="#">Menú Restaurante</a>
-    <a href="#">Pedidos</a>
+<div class="row center">
+  <div class="style-title">
+    <h1>Restaurante JC</h1>
+  </div>
+  <div class="row">
+    <a class="waves-effect waves-light btn" href="/menu/menuRest">Menú Restaurante</a>
+  </div> 
+  <div class="row">
+    <a class="waves-effect waves-light btn" href="/menu/pedidos">Pedidos</a>
+  </div>
+  <div class="row">
     <form action="/logout?_method=delete" method="post">
-      <input type="submit" value="logout" />
+      <input class="waves-effect waves-light btn" type="submit" value="Logout" />
     </form>
-</html>
+  </div>  
+</div>
+
+

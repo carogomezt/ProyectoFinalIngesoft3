@@ -11,8 +11,11 @@ function loginRequired(req, res, next) {
 }
 
 module.exports = function(app, mountPoint) {
-  router.get('/', function(req, res) {
-
+  router.get('/menuRest', function(req, res) {
+  	res.render('menuRest');
+  });
+  router.get('/pedidos', function(req, res) {
+  	res.render('pedidos');
   });
 
   app.use(mountPoint, router);
