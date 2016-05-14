@@ -7,10 +7,12 @@
   },
   "dependencies": {
     "body-parser": "~1.0.0",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.0.1",
     "debug": "~0.7.4",
     "ejs": "~0.8.5",
     "express": "~4.0.0",
+    "express-messages": "^1.0.1",
     "express-partials": "^0.3.0",
     "express-session": "^1.13.0",
     "method-override": "^2.3.5",

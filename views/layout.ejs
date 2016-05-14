@@ -9,7 +9,11 @@
     <link href='https://fonts.googleapis.com/css?family=Linden+Hill:400italic' rel='stylesheet' type='text/css'>
   </head>
   <body>
-           
+    <% if (messages.length > 0) { %>
+      <div>
+        <input type="hidden" id="myAlert" value="<%= messages() %>">
+      </div>
+    <% } %>           
     <%- body%>
     <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="/js/materialize.min.js"></script>
@@ -19,5 +23,6 @@
        $(".button-collapse").sideNav();
       });
     </script>
+    <script type="text/javascript" src="/js/alert.js"></script>
   </body>
 </html>

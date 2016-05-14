@@ -5,8 +5,9 @@ const express = require('express'),
       cookieParser = require('cookie-parser'),
       bodyParser = require('body-parser'),
       methodOverride = require('method-override'),
-      partials = require('express-partials')
-      session = require('express-session');
+      partials = require('express-partials'),
+      session = require('express-session'),
+      flash = require('connect-flash');
 
 var app = express();
 
@@ -27,10 +28,11 @@ app.use(session({
   resave: false,
   saveUninitalized: false
 }));
-
+app.use(flash());
 
 app.use(function(req, res, next){
   res.locals.session = req.session;
+  res.locals.messages = require('express-messages')(req, res);
   next();
 });
 

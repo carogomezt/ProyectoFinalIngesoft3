@@ -1,15 +1,40 @@
 <div class="content">
-  <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
         <a href="/menu" class="brand-logo">Restaurante JC</a>
+        
         <ul class="right hide-on-med-and-down">
+        	<li><a href="/menu/menuRest" class="brand-logo center">Menu</a></li>
           <li><form action="/logout?_method=delete" method="post">
               <input class="waves-effect waves-light" type="submit" value="Logout" />
               <i class="material-icons right">view_module</i>
             </form></li>
         </ul>
       </div>
-    </nav>
   </div>
+  <% if (platos.length>0) {%>
+  <table>
+    <thead>
+      <tr>
+          <th data-field="id">Cantidad</th>
+          <th data-field="name">Descripción</th>
+          <th data-field="name">Valor</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    
+    <%for(var i in platos){%>
+    	<tr>
+        <td><%=platos[i].cant%></td>
+        <td><%=platos[i].descrip%></td>
+        <td>$<%=Number(platos[i].value)*Number(platos[i].cant)%></td>
+      </tr>
+    <% }%>
+    
+      
+    </tbody>
+  </table>
+  <%}%>
+
 </div>

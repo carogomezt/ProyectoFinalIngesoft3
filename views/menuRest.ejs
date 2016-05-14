@@ -1,5 +1,4 @@
 <div class="content">
-  <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
         <a href="/menu" class="brand-logo">Restaurante JC</a>
@@ -10,62 +9,69 @@
             </form></li>
         </ul>
       </div>
-    </nav>
-  </div>
+    </nav>  
   <div class="cont style-title">
-    <h1>MENU DEL DIA</h1>
+    <h1>MENÚ DEL DÍA</h1>
   </div>
   <div class="cont center">
     <div class="row">
-      <div class="col l4">
-        <img src="/imgs/p1.jpg">
-        <div class="text-left">
-          <p>Spaguettis con salsa roja</p>
-          <p>Ingredientes: </p>
-          <p>Spaguettis</p>
-          <p>salsa roja</p>
+      <form method="post" action="/menu/pedidos">
+        <div class="col l4">          
+          <img src="/imgs/p1.jpg">
+          <div class="text-left">
+            <p>Spaguettis con salsa roja</p>
+            <p>Ingredientes: </p>
+            <p>Spaguettis</p>
+            <p>salsa roja</p>
+            <p>$20.000</p>
+          </div>          
+            <div class="text-left input-field col l4 col m4 col s4">
+              <input type="hidden" name="descrip1" value="Spaguettis con salsa roja" />
+              <input type="hidden" name="val1" value="20000" />
+              <input id="cant" type="text" class="validate" name="cant1">
+              <label for="cant">Cantidad</label>
+            </div>                      
         </div>
-        <div class="text-left input-field col l4 col m4 col s4">
-          <input id="cant" type="text" class="validate" name="cant">
-          <label for="cant">Cantidad</label>
+        <div class="col l4">          
+          <img src="/imgs/p1.jpg">
+          <div class="text-left">
+            <p>Spaguettis con salsa roja</p>
+            <p>Ingredientes: </p>
+            <p>Spaguettis</p>
+            <p>salsa roja</p>
+            <p>$20.000</p>
+          </div>          
+            <div class="text-left input-field col l4 col m4 col s4">
+              <input type="hidden" name="descrip2" value="Spaguettis con salsa roja" />
+              <input type="hidden" name="val2" value="20000" />
+              <input id="cant" type="text" class="validate" name="cant2">
+              <label for="cant">Cantidad</label>
+            </div>          
+        </div> 
+        <div class="col l4">          
+          <img src="/imgs/p1.jpg">
+          <div class="text-left">
+            <p>Spaguettis con salsa roja</p>
+            <p>Ingredientes: </p>
+            <p>Spaguettis</p>
+            <p>salsa roja</p>
+            <p>$20.000</p>
+          </div>          
+            <div class="text-left input-field col l4 col m4 col s4">
+              <input type="hidden" name="descrip3" value="Spaguettis con salsa roja" />
+              <input type="hidden" name="val3" value="20000" />
+              <input id="cant" type="text" class="validate" name="cant3">
+              <label for="cant">Cantidad</label>
+            </div>          
         </div>
-        <form method="post">
+        <div class="row">
           <input class="waves-effect waves-light btn" type="submit" value="Pedir" />
-        </form>             
-      </div>
-      <div class="col l4">
-        <img src="/imgs/p1.jpg">
-        <div class="text-left">
-          <p>Spaguettis con salsa roja</p>
-          <p>Ingredientes: </p>
-          <p>Spaguettis</p>
-          <p>salsa roja</p>
-        </div>
-        <div class="text-left input-field col l4 col m4 col s4">
-          <input id="cant" type="text" class="validate" name="cant">
-          <label for="cant">Cantidad</label>
-        </div>
-        <form method="post">
-          <input class="waves-effect waves-light btn" type="submit" value="Pedir" />
-        </form>
-      </div>
-      <div class="col l4">
-        <img src="/imgs/p1.jpg">
-        <div class="text-left">
-          <p>Spaguettis con salsa roja</p>
-          <p>Ingredientes: </p>
-          <p>Spaguettis</p>
-          <p>salsa roja</p>
-        </div>
-        <div class="text-left input-field col l4 col m4 col s4">
-          <input id="cant" type="text" class="validate" name="cant">
-          <label for="cant">Cantidad</label>
-        </div>
-        <form method="post">
-          <input class="waves-effect waves-light btn" type="submit" value="Pedir" />
-        </form>
-      </div>
-    </div>    
+        </div>             
+      </form>             
+      
+      
+    </div>
+        
   </div>
 </div>
   
