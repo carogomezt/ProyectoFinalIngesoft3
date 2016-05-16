@@ -3,6 +3,9 @@ var router = express.Router();
 
 var users = [{"mesa": 1, "pwd": "123"},
              {"mesa": 2, "pwd": "123"},
+             {"mesa": 3, "pwd": "123"},
+             {"mesa": 4, "pwd": "123"},
+             {"mesa": 5, "pwd": "123"}
             ];
 
 module.exports = function(app, mountPoint) {
