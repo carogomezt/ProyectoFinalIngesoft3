@@ -13,7 +13,7 @@
       </div>
   </div>
   <% if (platos.length>0) {%>
-  <table>
+  <table class="striped">
     <thead>
       <tr>
           <th data-field="id">Cantidad</th>
@@ -23,16 +23,21 @@
     </thead>
 
     <tbody>
-    
+    <%var tmp = 0;%>
     <%for(var i in platos){%>
     	<tr>
         <td><%=platos[i].cant%></td>
         <td><%=platos[i].descrip%></td>
-        <td>$<%=Number(platos[i].value)*Number(platos[i].cant)%></td>
-        
+        <td>$<%=Number(platos[i].value)*Number(platos[i].cant)%></td>        
       </tr>
-    <% }%>
-    
+      
+      <%tmp = tmp + Number(platos[i].value)*Number(platos[i].cant);%>
+    <% }%>    
+    	<tr>
+    		<td></td>
+    		<td>Total</td>
+    		<td>$<%=tmp%></td>    		
+    	</tr>
       
     </tbody>
   </table>
