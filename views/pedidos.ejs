@@ -6,41 +6,60 @@
         <ul class="right hide-on-med-and-down">
         	<li><a href="/menu/menuRest" class="brand-logo center logout">MENÚ</a></li>
           <li><form action="/logout?_method=delete" method="post">
-              <input class="waves-effect waves-light logout" type="submit" value="Logout" />
+              <input class="waves-effect waves-light cuprum-text" type="submit" value="Logout" />
               <i class="material-icons right">view_module</i>
             </form></li>
         </ul>
       </div>
   </div>
   <% if (platos.length>0) {%>
-  <table class="striped">
-    <thead>
-      <tr>
-          <th data-field="id">Cantidad</th>
-          <th data-field="name">Descripción</th>
-          <th data-field="name">Valor</th>
-      </tr>
-    </thead>
+  <div class="row div-size">
+    <div class="col s12">
+      <table class="striped centered">
+        <thead>
+          <tr>
+              <th data-field="id" class="cuprum-text">Cantidad</th>
+              <th data-field="name" class="cuprum-text">Descripción</th>
+              <th data-field="name" class="cuprum-text">Valor</th>
+          </tr>
+        </thead>
 
-    <tbody>
-    <%var tmp = 0;%>
-    <%for(var i in platos){%>
-    	<tr>
-        <td><%=platos[i].cant%></td>
-        <td><%=platos[i].descrip%></td>
-        <td>$<%=Number(platos[i].value)*Number(platos[i].cant)%></td>        
-      </tr>
-      
-      <%tmp = tmp + Number(platos[i].value)*Number(platos[i].cant);%>
-    <% }%>    
-    	<tr>
-    		<td></td>
-    		<td>Total</td>
-    		<td>$<%=tmp%></td>    		
-    	</tr>
-      
-    </tbody>
-  </table>
+        <tbody>
+        <%var tmp = 0;%>
+        <%for(var i in platos){%>
+          <tr>
+            <td><%=platos[i].cant%></td>
+            <td><%=platos[i].descrip%></td>
+            <td>$<%=Number(platos[i].value)*Number(platos[i].cant)%></td>        
+          </tr>
+          
+          <%tmp = tmp + Number(platos[i].value)*Number(platos[i].cant);%>
+        <% }%>    
+          <tr>
+            <td></td>
+            <td>Total</td>
+            <td>$<%=tmp%></td>        
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>    
+  </div>  
+  
+  <footer class="color-footer page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h6 class="grey-text text-lighten-4">Jose Luis Bedoya Giraldo</h6>
+          <h6 class="grey-text text-lighten-4">Carolina Gómez Trejos</h6>
+        </div>              
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container ">
+      © 2016 Todos los derechos reservados
+      </div>
+    </div>
+  </footer>
   <%}%>
-
 </div>

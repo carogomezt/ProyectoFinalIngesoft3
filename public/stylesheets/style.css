@@ -1,10 +1,28 @@
 html, body {
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-size: 17px;
   background-color: #fff;
   font-family: 'Lato', sans-serif;
+}
+
+@font-face {
+  font-family: Linden_Hill;
+  src: url(/font/Linden_Hill/LindenHill-Italic.ttf);
+}
+
+@font-face {
+  font-family: Cuprum;
+  src: url(/font/Cuprum/Cuprum-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(/font/icon.woff2) format('woff2');
 }
 
 .content{
@@ -22,25 +40,32 @@ html, body {
   padding: 10px;
   background-color:  #fff;
 }
+
 .style-title {
-	font-family: 'Linden Hill', serif;
-  text-align: center;  
+  font-family: Linden_Hill;
+  text-align: center; 
 }
 
-.logout {
-  font-family: 'Cuprum', sans-serif;
+tr {
+  font-family: Linden_Hill;
+  font-size: 25px;
+}
+
+.cuprum-text {
+  font-family: Cuprum;
 }
 
 p {
-  font-family: 'Linden Hill', serif;
+  font-family: Linden_Hill;
   text-align: center;
   font-size: 23px;
 }
 
 h2 {
-  font-family: 'Linden Hill', serif;
+  font-family: Linden_Hill;
   text-align: center;
 }
+
 nav {
 	background-color: #26a69a;
 }
@@ -59,14 +84,6 @@ nav {
 	width: 250px;
 }
 
-/* fallback */
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Material Icons'), local('MaterialIcons-Regular'), url(/font/icon.woff2) format('woff2');
-}
-
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -81,4 +98,9 @@ nav {
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
+}
+
+.div-size {
+  width: 80%;
+  height: 80% !important;
 }
